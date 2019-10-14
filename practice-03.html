@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let age = + prompt("Nhập vào tuổi của bạn");
+    let result = document.getElementById("result");
+    function caculateAge(yourAge) {
+        let dateSystem = new Date();
+        let yearSystem = parseInt(dateSystem.getFullYear()) ;
+        if(yourAge >= yearSystem){
+            alert("Năm sinh không hợp lệ");
+        }
+        else
+            return (yearSystem - yourAge);
+    }
+    result.innerHTML = "Tuổi của bạn: " + caculateAge(age);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let postionX = +prompt("Input number row ");
+    let postionY = +prompt("Input number column");
+    let sum = 0;
+    //create two-dimention Array
+    let matrix = new Array(postionX);
+    for (let i = 0; i < postionX; i++) {
+        matrix[i] = new Array(postionY);
+    }
+    //gán giá trị cho mảng hai chiều
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            matrix[i][j] = 1;
+        }
+    }
+
+    for (let i = 0; i < postionX; i++) {
+        for (j = 0; j < postionY; j++) {
+            if (i == j)
+                sum = sum + matrix[i][j];
+        }
+    }
+    document.getElementById("result").innerHTML = "Tổng đường chéo của ma trận: " + sum;
+    
+
+</script>
+
+</body>
+</html>
